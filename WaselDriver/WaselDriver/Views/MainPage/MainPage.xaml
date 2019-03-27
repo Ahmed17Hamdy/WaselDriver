@@ -35,9 +35,5 @@
                 </Grid>
             </AbsoluteLayout>
         </Grid>
-       
-      
-
     </ContentPage.Content>
-   
 </ContentPage>

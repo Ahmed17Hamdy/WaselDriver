@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Com.OneSignal;
+using System;
 using WaselDriver.Views.UserAuthentication;
 using Xamarin.Forms;
 using Xamarin.Forms.Xaml;
@@ -15,6 +16,9 @@ namespace WaselDriver
             InitializeComponent();
 
             MainPage = new LoginPage();
+            OneSignal.Current.StartInit("1126a3d0-1d80-42ee-94db-d0449ac0a62c").EndInit();
+            
+
         }
 
         protected override void OnStart()

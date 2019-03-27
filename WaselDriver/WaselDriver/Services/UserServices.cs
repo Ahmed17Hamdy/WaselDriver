@@ -171,5 +171,35 @@ namespace WaselDriver.Services
                 }
             }
         }
+        public async Task<User> UpdateUserLocation(User user)
+        {
+            using (var client = new HttpClient())
+            {
+                Dictionary<string, string> values = new Dictionary<string, string>();
+                
+                values.Add("user_id", user.id.ToString());
+                
+                try
+                {
+                    string content = JsonConvert.SerializeObject(values);
+                    var response = await client.PostAsync("http://wassel.alsalil.net/api/updateprofile", new StringContent(content, Encoding.UTF8, "text/json"));
+                    if (response.IsSuccessStatusCode)
+                    {
+                        var serverResponse = response.Content.ReadAsStringAsync().Result.ToString();
+                        var Req = JsonConvert.DeserializeObject<Response<string, User>>(serverResponse);
+                        return Req.message;
+                    }
+                    else
+                    {
+                        return null;
+                    }
+
+                }
+                catch (Exception)
+                {
+                    return null;
+                }
+            }
+        }
     }
 }

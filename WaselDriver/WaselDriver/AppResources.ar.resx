@@ -141,6 +141,9 @@
   <data name="Email" xml:space="preserve">
     <value>البريد الإلكترونية</value>
   </data>
+  <data name="Error" xml:space="preserve">
+    <value>! خطأ</value>
+  </data>
   <data name="ErrorMessage" xml:space="preserve">
     <value>عفواً تحقق من الإتصال بالإنترنت</value>
   </data>
@@ -168,6 +171,9 @@
   <data name="NoAccount" xml:space="preserve">
     <value>لا تمتلك حساب ؟</value>
   </data>
+  <data name="Ok" xml:space="preserve">
+    <value>حسناً</value>
+  </data>
   <data name="Pass" xml:space="preserve">
     <value>الرقم السري</value>
   </data>
@@ -179,6 +185,12 @@
   </data>
   <data name="Register" xml:space="preserve">
     <value>سجل</value>
+  </data>
+  <data name="RegisterError" xml:space="preserve">
+    <value />
+  </data>
+  <data name="RegisterSuccess" xml:space="preserve">
+    <value>تم التسجيل بنجاح , حسابك غير مفعل حتى الآن </value>
   </data>
   <data name="SelectCountry" xml:space="preserve">
     <value>: إختر الدولة</value>

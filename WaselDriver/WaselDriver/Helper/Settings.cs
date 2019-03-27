@@ -59,6 +59,34 @@ namespace WaselDriver.Helper
 
         }
 
+        private const string LastlatKey = "last_lat_key";
+        private static readonly string LatKey = string.Empty;
+        public static string LastLat
+        {
+            get
+            =>
+                 AppSettings.GetValueOrDefault(LastlatKey, LatKey);
+
+
+            set
+            =>
+                AppSettings.AddOrUpdateValue(LastlatKey, value);
+
+        }
+        private const string LastlngKey = "last_lng_key";
+        private static readonly string LngKey = string.Empty;
+        public static string LastLng
+        {
+            get
+            =>
+                 AppSettings.GetValueOrDefault(LastlngKey, LngKey);
+
+
+            set
+            =>
+                AppSettings.AddOrUpdateValue(LastlngKey, value);
+
+        }
         //private const string LastServiceSettingsKey = "last_service_key";
         //private static readonly string ServiceSettingsDefault = string.Empty;
         //public static string LastUsedService

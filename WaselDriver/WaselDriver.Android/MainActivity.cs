@@ -8,6 +8,7 @@ using Android.Widget;
 using Android.OS;
 using TK.CustomMap.Droid;
 using Plugin.CurrentActivity;
+using Com.OneSignal;
 
 namespace WaselDriver.Droid
 {
@@ -37,6 +38,7 @@ namespace WaselDriver.Droid
             global::Xamarin.Forms.Forms.Init(this, savedInstanceState);
             CrossCurrentActivity.Current.Init(this, savedInstanceState);
             Rg.Plugins.Popup.Popup.Init(this, savedInstanceState);
+            OneSignal.Current.StartInit("1126a3d0-1d80-42ee-94db-d0449ac0a62c").EndInit();
             TKGoogleMaps.Init(this, savedInstanceState);
             LoadApplication(new App());
         }

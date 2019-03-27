@@ -55,12 +55,10 @@ namespace WaselDriver.Views.UserAuthentication
                         if (JsonResponse.success == true)
                         {
                             checker = true;
-                          PopAlert(checker);
+                        //  PopAlert(checker);
                             Settings.UserHash = JsonResponse.message.user_hash;
-                            Settings.UserFirebaseToken = JsonResponse.message.firebase_token;
-                            
-                              
-                                Device.BeginInvokeOnMainThread(() => App.Current.MainPage = new DriverRegestration(JsonResponse.message.id));
+                            Settings.UserFirebaseToken = JsonResponse.message.firebase_token;     
+                            Device.BeginInvokeOnMainThread(() => App.Current.MainPage = new DriverRegestration(JsonResponse.message.id));
                         }
                         else
                         {
@@ -73,7 +71,7 @@ namespace WaselDriver.Views.UserAuthentication
                     {
                         Activ.IsRunning = false;
                         var JsonResponse = JsonConvert.DeserializeObject<Response<object, string>>(ResBack);
-                     //  PopAlert(checker);
+                     PopAlert(checker);
                         return;
                     }
                 }
@@ -112,6 +110,11 @@ namespace WaselDriver.Views.UserAuthentication
         {
             PopupNavigation.Instance.PushAsync(new RequestPopUp(x, 1));
             return;
+        }
+
+        private async void LoginPageTapped(object sender, EventArgs e)
+        {
+            await Navigation.PushModalAsync(new LoginPage());
         }
     }
 }

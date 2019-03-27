@@ -4621,26 +4621,26 @@ namespace WaselDriver.Droid
 			// aapt resource value: 0x7f020055
 			public const int avd_hide_password = 2130837589;
 			
-			// aapt resource value: 0x7f02014c
-			public const int avd_hide_password_1 = 2130837836;
-			
 			// aapt resource value: 0x7f02014d
-			public const int avd_hide_password_2 = 2130837837;
+			public const int avd_hide_password_1 = 2130837837;
 			
 			// aapt resource value: 0x7f02014e
-			public const int avd_hide_password_3 = 2130837838;
+			public const int avd_hide_password_2 = 2130837838;
+			
+			// aapt resource value: 0x7f02014f
+			public const int avd_hide_password_3 = 2130837839;
 			
 			// aapt resource value: 0x7f020056
 			public const int avd_show_password = 2130837590;
 			
-			// aapt resource value: 0x7f02014f
-			public const int avd_show_password_1 = 2130837839;
-			
 			// aapt resource value: 0x7f020150
-			public const int avd_show_password_2 = 2130837840;
+			public const int avd_show_password_1 = 2130837840;
 			
 			// aapt resource value: 0x7f020151
-			public const int avd_show_password_3 = 2130837841;
+			public const int avd_show_password_2 = 2130837841;
+			
+			// aapt resource value: 0x7f020152
+			public const int avd_show_password_3 = 2130837842;
 			
 			// aapt resource value: 0x7f020057
 			public const int camera = 2130837591;
@@ -5240,142 +5240,145 @@ namespace WaselDriver.Droid
 			public const int ic_mr_button_grey = 2130837789;
 			
 			// aapt resource value: 0x7f02011e
-			public const int ic_vol_type_speaker_dark = 2130837790;
+			public const int ic_os_notification_fallback_white_24dp = 2130837790;
 			
 			// aapt resource value: 0x7f02011f
-			public const int ic_vol_type_speaker_group_dark = 2130837791;
+			public const int ic_vol_type_speaker_dark = 2130837791;
 			
 			// aapt resource value: 0x7f020120
-			public const int ic_vol_type_speaker_group_light = 2130837792;
+			public const int ic_vol_type_speaker_group_dark = 2130837792;
 			
 			// aapt resource value: 0x7f020121
-			public const int ic_vol_type_speaker_light = 2130837793;
+			public const int ic_vol_type_speaker_group_light = 2130837793;
 			
 			// aapt resource value: 0x7f020122
-			public const int ic_vol_type_tv_dark = 2130837794;
+			public const int ic_vol_type_speaker_light = 2130837794;
 			
 			// aapt resource value: 0x7f020123
-			public const int ic_vol_type_tv_light = 2130837795;
+			public const int ic_vol_type_tv_dark = 2130837795;
 			
 			// aapt resource value: 0x7f020124
-			public const int MainPin = 2130837796;
+			public const int ic_vol_type_tv_light = 2130837796;
 			
 			// aapt resource value: 0x7f020125
-			public const int mr_button_connected_dark = 2130837797;
+			public const int MainPin = 2130837797;
 			
 			// aapt resource value: 0x7f020126
-			public const int mr_button_connected_light = 2130837798;
+			public const int mr_button_connected_dark = 2130837798;
 			
 			// aapt resource value: 0x7f020127
-			public const int mr_button_connecting_dark = 2130837799;
+			public const int mr_button_connected_light = 2130837799;
 			
 			// aapt resource value: 0x7f020128
-			public const int mr_button_connecting_light = 2130837800;
+			public const int mr_button_connecting_dark = 2130837800;
 			
 			// aapt resource value: 0x7f020129
-			public const int mr_button_dark = 2130837801;
+			public const int mr_button_connecting_light = 2130837801;
 			
 			// aapt resource value: 0x7f02012a
-			public const int mr_button_light = 2130837802;
+			public const int mr_button_dark = 2130837802;
 			
 			// aapt resource value: 0x7f02012b
-			public const int mr_dialog_close_dark = 2130837803;
+			public const int mr_button_light = 2130837803;
 			
 			// aapt resource value: 0x7f02012c
-			public const int mr_dialog_close_light = 2130837804;
+			public const int mr_dialog_close_dark = 2130837804;
 			
 			// aapt resource value: 0x7f02012d
-			public const int mr_dialog_material_background_dark = 2130837805;
+			public const int mr_dialog_close_light = 2130837805;
 			
 			// aapt resource value: 0x7f02012e
-			public const int mr_dialog_material_background_light = 2130837806;
+			public const int mr_dialog_material_background_dark = 2130837806;
 			
 			// aapt resource value: 0x7f02012f
-			public const int mr_group_collapse = 2130837807;
+			public const int mr_dialog_material_background_light = 2130837807;
 			
 			// aapt resource value: 0x7f020130
-			public const int mr_group_expand = 2130837808;
+			public const int mr_group_collapse = 2130837808;
 			
 			// aapt resource value: 0x7f020131
-			public const int mr_media_pause_dark = 2130837809;
+			public const int mr_group_expand = 2130837809;
 			
 			// aapt resource value: 0x7f020132
-			public const int mr_media_pause_light = 2130837810;
+			public const int mr_media_pause_dark = 2130837810;
 			
 			// aapt resource value: 0x7f020133
-			public const int mr_media_play_dark = 2130837811;
+			public const int mr_media_pause_light = 2130837811;
 			
 			// aapt resource value: 0x7f020134
-			public const int mr_media_play_light = 2130837812;
+			public const int mr_media_play_dark = 2130837812;
 			
 			// aapt resource value: 0x7f020135
-			public const int mr_media_stop_dark = 2130837813;
+			public const int mr_media_play_light = 2130837813;
 			
 			// aapt resource value: 0x7f020136
-			public const int mr_media_stop_light = 2130837814;
+			public const int mr_media_stop_dark = 2130837814;
 			
 			// aapt resource value: 0x7f020137
-			public const int mr_vol_type_audiotrack_dark = 2130837815;
+			public const int mr_media_stop_light = 2130837815;
 			
 			// aapt resource value: 0x7f020138
-			public const int mr_vol_type_audiotrack_light = 2130837816;
+			public const int mr_vol_type_audiotrack_dark = 2130837816;
 			
 			// aapt resource value: 0x7f020139
-			public const int navigation_empty_icon = 2130837817;
+			public const int mr_vol_type_audiotrack_light = 2130837817;
 			
 			// aapt resource value: 0x7f02013a
-			public const int notification_action_background = 2130837818;
+			public const int navigation_empty_icon = 2130837818;
 			
 			// aapt resource value: 0x7f02013b
-			public const int notification_bg = 2130837819;
+			public const int notification_action_background = 2130837819;
 			
 			// aapt resource value: 0x7f02013c
-			public const int notification_bg_low = 2130837820;
+			public const int notification_bg = 2130837820;
 			
 			// aapt resource value: 0x7f02013d
-			public const int notification_bg_low_normal = 2130837821;
+			public const int notification_bg_low = 2130837821;
 			
 			// aapt resource value: 0x7f02013e
-			public const int notification_bg_low_pressed = 2130837822;
+			public const int notification_bg_low_normal = 2130837822;
 			
 			// aapt resource value: 0x7f02013f
-			public const int notification_bg_normal = 2130837823;
+			public const int notification_bg_low_pressed = 2130837823;
 			
 			// aapt resource value: 0x7f020140
-			public const int notification_bg_normal_pressed = 2130837824;
+			public const int notification_bg_normal = 2130837824;
 			
 			// aapt resource value: 0x7f020141
-			public const int notification_icon_background = 2130837825;
-			
-			// aapt resource value: 0x7f02014a
-			public const int notification_template_icon_bg = 2130837834;
-			
-			// aapt resource value: 0x7f02014b
-			public const int notification_template_icon_low_bg = 2130837835;
+			public const int notification_bg_normal_pressed = 2130837825;
 			
 			// aapt resource value: 0x7f020142
-			public const int notification_tile_bg = 2130837826;
+			public const int notification_icon_background = 2130837826;
+			
+			// aapt resource value: 0x7f02014b
+			public const int notification_template_icon_bg = 2130837835;
+			
+			// aapt resource value: 0x7f02014c
+			public const int notification_template_icon_low_bg = 2130837836;
 			
 			// aapt resource value: 0x7f020143
-			public const int notify_panel_notification_icon_bg = 2130837827;
+			public const int notification_tile_bg = 2130837827;
 			
 			// aapt resource value: 0x7f020144
-			public const int places_ic_clear = 2130837828;
+			public const int notify_panel_notification_icon_bg = 2130837828;
 			
 			// aapt resource value: 0x7f020145
-			public const int places_ic_search = 2130837829;
+			public const int places_ic_clear = 2130837829;
 			
 			// aapt resource value: 0x7f020146
-			public const int powered_by_google_dark = 2130837830;
+			public const int places_ic_search = 2130837830;
 			
 			// aapt resource value: 0x7f020147
-			public const int powered_by_google_light = 2130837831;
+			public const int powered_by_google_dark = 2130837831;
 			
 			// aapt resource value: 0x7f020148
-			public const int tooltip_frame_dark = 2130837832;
+			public const int powered_by_google_light = 2130837832;
 			
 			// aapt resource value: 0x7f020149
-			public const int tooltip_frame_light = 2130837833;
+			public const int tooltip_frame_dark = 2130837833;
+			
+			// aapt resource value: 0x7f02014a
+			public const int tooltip_frame_light = 2130837834;
 			
 			static Drawable()
 			{
@@ -5684,26 +5687,26 @@ namespace WaselDriver.Droid
 			// aapt resource value: 0x7f0e006c
 			public const int list_item = 2131624044;
 			
-			// aapt resource value: 0x7f0e00df
-			public const int main_appbar = 2131624159;
+			// aapt resource value: 0x7f0e00e4
+			public const int main_appbar = 2131624164;
 			
-			// aapt resource value: 0x7f0e00e2
-			public const int main_scrollview = 2131624162;
+			// aapt resource value: 0x7f0e00e7
+			public const int main_scrollview = 2131624167;
 			
-			// aapt resource value: 0x7f0e00e1
-			public const int main_tablayout = 2131624161;
+			// aapt resource value: 0x7f0e00e6
+			public const int main_tablayout = 2131624166;
 			
-			// aapt resource value: 0x7f0e00e0
-			public const int main_toolbar = 2131624160;
+			// aapt resource value: 0x7f0e00e5
+			public const int main_toolbar = 2131624165;
 			
-			// aapt resource value: 0x7f0e00ea
-			public const int masked = 2131624170;
+			// aapt resource value: 0x7f0e00ef
+			public const int masked = 2131624175;
 			
 			// aapt resource value: 0x7f0e00ca
 			public const int media_actions = 2131624138;
 			
-			// aapt resource value: 0x7f0e00e8
-			public const int message = 2131624168;
+			// aapt resource value: 0x7f0e00ed
+			public const int message = 2131624173;
 			
 			// aapt resource value: 0x7f0e003d
 			public const int middle = 2131623997;
@@ -5810,6 +5813,21 @@ namespace WaselDriver.Droid
 			// aapt resource value: 0x7f0e00cc
 			public const int notification_main_column_container = 2131624140;
 			
+			// aapt resource value: 0x7f0e00d8
+			public const int os_bgimage_notif_bgimage = 2131624152;
+			
+			// aapt resource value: 0x7f0e00d7
+			public const int os_bgimage_notif_bgimage_align_layout = 2131624151;
+			
+			// aapt resource value: 0x7f0e00d9
+			public const int os_bgimage_notif_bgimage_right_aligned = 2131624153;
+			
+			// aapt resource value: 0x7f0e00db
+			public const int os_bgimage_notif_body = 2131624155;
+			
+			// aapt resource value: 0x7f0e00da
+			public const int os_bgimage_notif_title = 2131624154;
+			
 			// aapt resource value: 0x7f0e0057
 			public const int parallax = 2131624023;
 			
@@ -5822,29 +5840,29 @@ namespace WaselDriver.Droid
 			// aapt resource value: 0x7f0e0058
 			public const int pin = 2131624024;
 			
-			// aapt resource value: 0x7f0e00d9
-			public const int place_autocomplete_clear_button = 2131624153;
-			
-			// aapt resource value: 0x7f0e00db
-			public const int place_autocomplete_powered_by_google = 2131624155;
-			
-			// aapt resource value: 0x7f0e00dd
-			public const int place_autocomplete_prediction_primary_text = 2131624157;
-			
 			// aapt resource value: 0x7f0e00de
-			public const int place_autocomplete_prediction_secondary_text = 2131624158;
+			public const int place_autocomplete_clear_button = 2131624158;
+			
+			// aapt resource value: 0x7f0e00e0
+			public const int place_autocomplete_powered_by_google = 2131624160;
+			
+			// aapt resource value: 0x7f0e00e2
+			public const int place_autocomplete_prediction_primary_text = 2131624162;
+			
+			// aapt resource value: 0x7f0e00e3
+			public const int place_autocomplete_prediction_secondary_text = 2131624163;
+			
+			// aapt resource value: 0x7f0e00e1
+			public const int place_autocomplete_progress = 2131624161;
 			
 			// aapt resource value: 0x7f0e00dc
-			public const int place_autocomplete_progress = 2131624156;
+			public const int place_autocomplete_search_button = 2131624156;
 			
-			// aapt resource value: 0x7f0e00d7
-			public const int place_autocomplete_search_button = 2131624151;
+			// aapt resource value: 0x7f0e00dd
+			public const int place_autocomplete_search_input = 2131624157;
 			
-			// aapt resource value: 0x7f0e00d8
-			public const int place_autocomplete_search_input = 2131624152;
-			
-			// aapt resource value: 0x7f0e00da
-			public const int place_autocomplete_separator = 2131624154;
+			// aapt resource value: 0x7f0e00df
+			public const int place_autocomplete_separator = 2131624159;
 			
 			// aapt resource value: 0x7f0e0006
 			public const int progress_circular = 2131623942;
@@ -5927,14 +5945,14 @@ namespace WaselDriver.Droid
 			// aapt resource value: 0x7f0e0095
 			public const int select_dialog_listview = 2131624085;
 			
-			// aapt resource value: 0x7f0e00e3
-			public const int shellcontent_appbar = 2131624163;
+			// aapt resource value: 0x7f0e00e8
+			public const int shellcontent_appbar = 2131624168;
 			
-			// aapt resource value: 0x7f0e00e5
-			public const int shellcontent_scrollview = 2131624165;
+			// aapt resource value: 0x7f0e00ea
+			public const int shellcontent_scrollview = 2131624170;
 			
-			// aapt resource value: 0x7f0e00e4
-			public const int shellcontent_toolbar = 2131624164;
+			// aapt resource value: 0x7f0e00e9
+			public const int shellcontent_toolbar = 2131624169;
 			
 			// aapt resource value: 0x7f0e007f
 			public const int shortcut = 2131624063;
@@ -5948,8 +5966,8 @@ namespace WaselDriver.Droid
 			// aapt resource value: 0x7f0e0031
 			public const int showTitle = 2131623985;
 			
-			// aapt resource value: 0x7f0e00e6
-			public const int sliding_tabs = 2131624166;
+			// aapt resource value: 0x7f0e00eb
+			public const int sliding_tabs = 2131624171;
 			
 			// aapt resource value: 0x7f0e009a
 			public const int smallLabel = 2131624090;
@@ -6035,8 +6053,8 @@ namespace WaselDriver.Droid
 			// aapt resource value: 0x7f0e007a
 			public const int title_template = 2131624058;
 			
-			// aapt resource value: 0x7f0e00e7
-			public const int toolbar = 2131624167;
+			// aapt resource value: 0x7f0e00ec
+			public const int toolbar = 2131624172;
 			
 			// aapt resource value: 0x7f0e004a
 			public const int top = 2131624010;
@@ -6074,8 +6092,8 @@ namespace WaselDriver.Droid
 			// aapt resource value: 0x7f0e0016
 			public const int view_offset_helper = 2131623958;
 			
-			// aapt resource value: 0x7f0e00e9
-			public const int visible = 2131624169;
+			// aapt resource value: 0x7f0e00ee
+			public const int visible = 2131624174;
 			
 			// aapt resource value: 0x7f0e00bc
 			public const int volume_item_container = 2131624124;
@@ -6381,43 +6399,46 @@ namespace WaselDriver.Droid
 			public const int notification_template_part_time = 2130968641;
 			
 			// aapt resource value: 0x7f040042
-			public const int place_autocomplete_fragment = 2130968642;
+			public const int onesignal_bgimage_notif_layout = 2130968642;
 			
 			// aapt resource value: 0x7f040043
-			public const int place_autocomplete_item_powered_by_google = 2130968643;
+			public const int place_autocomplete_fragment = 2130968643;
 			
 			// aapt resource value: 0x7f040044
-			public const int place_autocomplete_item_prediction = 2130968644;
+			public const int place_autocomplete_item_powered_by_google = 2130968644;
 			
 			// aapt resource value: 0x7f040045
-			public const int place_autocomplete_progress = 2130968645;
+			public const int place_autocomplete_item_prediction = 2130968645;
 			
 			// aapt resource value: 0x7f040046
-			public const int RootLayout = 2130968646;
+			public const int place_autocomplete_progress = 2130968646;
 			
 			// aapt resource value: 0x7f040047
-			public const int select_dialog_item_material = 2130968647;
+			public const int RootLayout = 2130968647;
 			
 			// aapt resource value: 0x7f040048
-			public const int select_dialog_multichoice_material = 2130968648;
+			public const int select_dialog_item_material = 2130968648;
 			
 			// aapt resource value: 0x7f040049
-			public const int select_dialog_singlechoice_material = 2130968649;
+			public const int select_dialog_multichoice_material = 2130968649;
 			
 			// aapt resource value: 0x7f04004a
-			public const int ShellContent = 2130968650;
+			public const int select_dialog_singlechoice_material = 2130968650;
 			
 			// aapt resource value: 0x7f04004b
-			public const int support_simple_spinner_dropdown_item = 2130968651;
+			public const int ShellContent = 2130968651;
 			
 			// aapt resource value: 0x7f04004c
-			public const int Tabbar = 2130968652;
+			public const int support_simple_spinner_dropdown_item = 2130968652;
 			
 			// aapt resource value: 0x7f04004d
-			public const int Toolbar = 2130968653;
+			public const int Tabbar = 2130968653;
 			
 			// aapt resource value: 0x7f04004e
-			public const int tooltip = 2130968654;
+			public const int Toolbar = 2130968654;
+			
+			// aapt resource value: 0x7f04004f
+			public const int tooltip = 2130968655;
 			
 			static Layout()
 			{
@@ -6513,6 +6534,9 @@ namespace WaselDriver.Droid
 			
 			// aapt resource value: 0x7f090013
 			public const int amu_visibility_ground_overlay = 2131296275;
+			
+			// aapt resource value: 0x7f090014
+			public const int consumer_onesignal_keep = 2131296276;
 			
 			static Raw()
 			{

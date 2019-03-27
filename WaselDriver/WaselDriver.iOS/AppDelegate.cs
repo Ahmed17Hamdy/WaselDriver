@@ -1,7 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
-
+using Com.OneSignal;
 using Foundation;
 using UIKit;
 
@@ -25,6 +25,7 @@ namespace WaselDriver.iOS
             global::Xamarin.Forms.Forms.Init();
             LoadApplication(new App());
             Rg.Plugins.Popup.Popup.Init();
+            OneSignal.Current.StartInit("1126a3d0-1d80-42ee-94db-d0449ac0a62c").EndInit();
             return base.FinishedLaunching(app, options);
         }
     }

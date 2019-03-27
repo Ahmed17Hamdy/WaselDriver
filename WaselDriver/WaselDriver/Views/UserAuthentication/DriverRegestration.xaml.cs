@@ -8,7 +8,9 @@ using System.Net.Http;
 using System.Text;
 using System.Threading.Tasks;
 using WaselDriver.Models;
+using Xamarin.Essentials;
 using Xamarin.Forms;
+using WaselDriver.Helper;
 using Xamarin.Forms.Xaml;
 
 namespace WaselDriver.Views.UserAuthentication
@@ -21,13 +23,30 @@ namespace WaselDriver.Views.UserAuthentication
         public DriverRegestration (int id)
 		{
 			InitializeComponent ();
+            GetUserLocationAsync();
 		}
+
+        private async Task GetUserLocationAsync()
+        {
+            var location = await Geolocation.GetLastKnownLocationAsync();
+            if(location!= null)
+            {
+                Settings.LastLat = location.Latitude.ToString();
+                Settings.LastLng = location.Longitude.ToString();
+            }
+        }
+
         private async void Regbtn_Clicked(object sender, EventArgs e)
         {
+            Active.IsRunning = true;
             StringContent user_id = new StringContent(userId.ToString());   
             StringContent car_model_id = new StringContent(3.ToString());
+            StringContent lat = new StringContent(Settings.LastLat);
+            StringContent lang = new StringContent(Settings.LastLng);
             var content = new MultipartFormDataContent();
             content.Add(user_id, "user_id");
+            content.Add(lat,"lat");
+            content.Add(lang, "lang");
             content.Add(car_model_id, "car_model_id");
             content.Add(new StreamContent(ProfilePic.GetStream()), "personal_image", $"{ProfilePic.Path}");
             content.Add(new StreamContent(NationalImg1.GetStream()), "national_id_front", $"{NationalImg1.Path}");
@@ -41,11 +60,23 @@ namespace WaselDriver.Views.UserAuthentication
                 var httpResponseMessage = await httpClient.PostAsync("http://wassel.alsalil.net/api/driverRegister", content);
                 var serverResponse = httpResponseMessage.Content.ReadAsStringAsync().Result.ToString();
                 var json = JsonConvert.DeserializeObject<Response<string, string>>(serverResponse);
-                await DisplayAlert("", json.message, "موافق");
+                if (json.success == false)
+                {
+                    Active.IsRunning = false;
+                    await DisplayAlert(AppResources.Error, json.message, AppResources.Ok);
+                }
+                else
+                {
+                    Active.IsRunning = false;
+                    await DisplayAlert(json.message, AppResources.RegisterSuccess, "موافق");
+                    Device.BeginInvokeOnMainThread(() => App.Current.MainPage = new LoginPage());
+
+                }
             }
             catch (Exception)
             {
-                await DisplayAlert("خطأ", "خطأ بالإتصال بالإنترنت من فضلك حاول في وقت لاحق !!", "موافق");
+                Active.IsRunning = false;
+                await DisplayAlert(AppResources.ErrorMessage, AppResources.ErrorMessage,AppResources.Ok);
             }
         }
         private async void ProfileImg_Clicked(object sender, EventArgs e)
