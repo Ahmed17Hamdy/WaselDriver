@@ -11,7 +11,7 @@ using System.Collections.Generic;
 
 namespace WaselDriver.ViewModels
 {
-  public  class MainViewModel : INotifyPropertyChanged
+  public  class MainViewModel : BaseViewModel
     {
         private static ObservableCollection<Country> _countries;
         public ObservableCollection<Country> Countries
@@ -64,11 +64,11 @@ namespace WaselDriver.ViewModels
             }
                      
         }
-        public event PropertyChangedEventHandler PropertyChanged;
-        protected virtual void OnPropertyChanged([CallerMemberName] string propertyName = null)
-        {
-            PropertyChanged?.Invoke(this, new PropertyChangedEventArgs(propertyName));
-        }
+        //public event PropertyChangedEventHandler PropertyChanged;
+        //protected virtual void OnPropertyChanged([CallerMemberName] string propertyName = null)
+        //{
+        //    PropertyChanged?.Invoke(this, new PropertyChangedEventArgs(propertyName));
+        //}
     }
     
 }

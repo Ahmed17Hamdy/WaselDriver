@@ -120,17 +120,26 @@
   <data name="BackCard" xml:space="preserve">
     <value>صورة الرقم القومى (الخلفية)</value>
   </data>
+  <data name="Cancel" xml:space="preserve">
+    <value>لا</value>
+  </data>
   <data name="CarImages" xml:space="preserve">
     <value>صور السيارة</value>
   </data>
   <data name="CarLiecence" xml:space="preserve">
     <value>صورة رخصة السيارة</value>
   </data>
+  <data name="ChooseCarType" xml:space="preserve">
+    <value>من فضلك إختر نوع سيارتك</value>
+  </data>
   <data name="Confirm" xml:space="preserve">
     <value>تأكيد</value>
   </data>
   <data name="ConfirmPass" xml:space="preserve">
     <value>تأكيد الرقم السري</value>
+  </data>
+  <data name="Continue" xml:space="preserve">
+    <value>إستكمل</value>
   </data>
   <data name="DriverLiecence" xml:space="preserve">
     <value>صورة رخصة السائق</value>
@@ -159,6 +168,18 @@
   <data name="IdentityImages" xml:space="preserve">
     <value>إضافة صور الرقم القومي</value>
   </data>
+  <data name="Language" xml:space="preserve">
+    <value>اللغة</value>
+  </data>
+  <data name="LocationFrom" xml:space="preserve">
+    <value>: عنوان مكان بدء التحرك</value>
+  </data>
+  <data name="LocationNotFound" xml:space="preserve">
+    <value>عفواً , هذا الموقع غير متوفر</value>
+  </data>
+  <data name="LocationTo" xml:space="preserve">
+    <value>: عنوان الوصول</value>
+  </data>
   <data name="Login" xml:space="preserve">
     <value>تسجيل الدخول</value>
   </data>
@@ -168,11 +189,20 @@
   <data name="Name" xml:space="preserve">
     <value>الإسم</value>
   </data>
+  <data name="Next" xml:space="preserve">
+    <value>التالى</value>
+  </data>
   <data name="NoAccount" xml:space="preserve">
     <value>لا تمتلك حساب ؟</value>
   </data>
   <data name="Ok" xml:space="preserve">
     <value>حسناً</value>
+  </data>
+  <data name="OrderDetails" xml:space="preserve">
+    <value>يريد طلب توصيل</value>
+  </data>
+  <data name="OrderSuccess" xml:space="preserve">
+    <value>تم تأكيد الطلب </value>
   </data>
   <data name="Pass" xml:space="preserve">
     <value>الرقم السري</value>
@@ -190,12 +220,21 @@
     <value />
   </data>
   <data name="RegisterSuccess" xml:space="preserve">
-    <value>تم التسجيل بنجاح , حسابك غير مفعل حتى الآن </value>
+    <value>تم التسجيل بنجاح , سيتم مراجعة بياناتك والتواصل معك قريباً </value>
+  </data>
+  <data name="SelectCarType" xml:space="preserve">
+    <value>إختر نوع السيارة</value>
   </data>
   <data name="SelectCountry" xml:space="preserve">
     <value>: إختر الدولة</value>
   </data>
+  <data name="SelectLanguage" xml:space="preserve">
+    <value>إختر اللغة</value>
+  </data>
+  <data name="TryAgain" xml:space="preserve">
+    <value>حاول مرة أخرى</value>
+  </data>
   <data name="UserStatues" xml:space="preserve">
-    <value>.... حسابك غير مفعل حتى الآن</value>
+    <value> .... حسابك غير مفعل حتى الآن</value>
   </data>
 </root>

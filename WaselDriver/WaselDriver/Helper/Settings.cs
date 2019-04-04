@@ -15,6 +15,106 @@ namespace WaselDriver.Helper
                 return CrossSettings.Current;
             }
         }
+        private const string LascarmodelidKey = "last_carmodelid_key";
+        private static readonly string Carmodelkey= string.Empty;
+        public static string CarModelID
+        {
+            get
+            =>
+                 AppSettings.GetValueOrDefault(LascarmodelidKey, Carmodelkey);
+
+
+            set
+            =>
+                AppSettings.AddOrUpdateValue(LascarmodelidKey, value);
+
+        }
+        private const string LastlattoKey = "last_latto_key";
+        private static readonly string LattoKey = string.Empty;
+        public static string Latto
+        {
+            get
+            =>
+                 AppSettings.GetValueOrDefault(LastlattoKey, LattoKey);
+
+
+            set
+            =>
+                AppSettings.AddOrUpdateValue(LastlattoKey, value);
+
+        }
+        private const string LastlatfromKey = "last_latfrom_key";
+        private static readonly string LatfromKey = string.Empty;
+        public static string Latfrom
+        {
+            get
+            =>
+                 AppSettings.GetValueOrDefault(LastlatfromKey, LatfromKey);
+
+
+            set
+            =>
+                AppSettings.AddOrUpdateValue(LastlatfromKey, value);
+
+        }
+        private const string LastlngtoKey = "last_lngto_key";
+        private static readonly string LngtoKey = string.Empty;
+        public static string Lngto
+        {
+            get
+            =>
+                 AppSettings.GetValueOrDefault(LastlngtoKey, LngtoKey);
+
+
+            set
+            =>
+                AppSettings.AddOrUpdateValue(LastlngtoKey, value);
+
+        }
+        private const string LastlngfromKey = "last_lngfrom_key";
+        private static readonly string LngfromKey = string.Empty;
+        public static string Lngfrom
+        {
+            get
+            =>
+                 AppSettings.GetValueOrDefault(LastlngfromKey, LngfromKey);
+
+
+            set
+            =>
+                AppSettings.AddOrUpdateValue(LastlngfromKey, value);
+
+        }
+        private const string LastPlacetoKey = "last_Placeto_key";
+        private static readonly string PlacetoKey = string.Empty;
+        public static string Placeto
+        {
+            get
+            =>
+                 AppSettings.GetValueOrDefault(LastPlacetoKey, PlacetoKey);
+
+
+            set
+            =>
+                AppSettings.AddOrUpdateValue(LastPlacetoKey, value);
+
+        }
+
+        private const string LastPlacefromKey = "last_Placefrom_key";
+        private static readonly string PlacefromKey = string.Empty;
+        public static string PlaceFrom
+        {
+            get
+            =>
+                 AppSettings.GetValueOrDefault(LastPlacefromKey, PlacefromKey);
+
+
+            set
+            =>
+                AppSettings.AddOrUpdateValue(LastPlacefromKey, value);
+
+        }
+
         private const string LastEmailSettingsKey = "last_email_key";
         private static readonly string SettingsDefault = string.Empty;
         public static string LastUsedEmail
@@ -227,6 +327,14 @@ namespace WaselDriver.Helper
         {
             get => AppSettings.GetValueOrDefault(_cityID, SettingsCityDefault);
             set => AppSettings.AddOrUpdateValue(_cityID, value);
+
+        }
+        private const string _notification = "last_notification";
+        private static readonly string Settingsnotification =null;
+        public static string LastNotify
+        {
+            get => AppSettings.GetValueOrDefault(_notification, Settingsnotification);
+            set => AppSettings.AddOrUpdateValue(_notification, value);
 
         }
 

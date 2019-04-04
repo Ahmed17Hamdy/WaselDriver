@@ -11,14 +11,18 @@
                     <RowDefinition Height="*"/>
                     <RowDefinition Height="*"/>
                     <RowDefinition Height="*"/>
+                    <RowDefinition Height="*"/>
                     <RowDefinition Height="80"/>
+                    
                 </Grid.RowDefinitions>
                 <Grid x:Name="ProfileImg" Padding="5" Grid.Row="0">
-                    <Label HorizontalOptions="Center" FontSize="Large" Text="{i18n:Translate ProfileImages}"/>
+                    <StackLayout>
+                        <Label HorizontalOptions="Center" FontSize="Large" Text="{i18n:Translate ProfileImages}"/>
                         <Image x:Name="ProfImgSource" HeightRequest="100" WidthRequest="100" Aspect="AspectFill"/>
-                    <StackLayout HorizontalOptions="Center" VerticalOptions="Center">
-                        <Image Aspect="AspectFit" x:Name="FileImage1"
+                        <StackLayout HorizontalOptions="Center" VerticalOptions="Center">
+                            <Image Aspect="AspectFit" x:Name="FileImage1"
                                    HeightRequest="30" WidthRequest="30" Source="camera.png"/>
+                        </StackLayout>
                     </StackLayout>
                     <Grid.GestureRecognizers>
                         <TapGestureRecognizer Tapped="ProfileImg_Clicked"/>
@@ -99,7 +103,11 @@
                         </Frame.GestureRecognizers>
                     </Frame>
                 </StackLayout>
-                <Button  Grid.Row="4" HeightRequest="40"
+                <Button Grid.Row="4" Text="{i18n:Translate SelectCarType}"
+                         BackgroundColor="OrangeRed" Padding="7" 
+                          Margin="10" TextColor="White" BorderRadius="10"
+                        Clicked="TapGestureRecognizer_Tapped" />
+                <Button  Grid.Row="5" HeightRequest="40"
                     Clicked="Regbtn_Clicked" Text="{i18n:Translate Register}"
                          x:Name="regbtn"  BackgroundColor="OrangeRed" Padding="7" 
                          Margin="10" TextColor="White" BorderRadius="10" />

@@ -33,7 +33,7 @@ namespace WaselDriver.Views.UserAuthentication
                     password = EntryPassword.Text,
                     confirmpass = ConfirmPassword.Text,
                     phone = EntryPhone.Text,
-                    country = (PickerCountry.SelectedIndex + 1).ToString(),
+                    country = Settings.LastCountry.ToString(),
                     role = Settings.LastUseeRole = 3,
                     device_id = "192.168.1.20",
                     firebase_token = Settings.UserFirebaseToken = "36666666",
@@ -82,7 +82,7 @@ namespace WaselDriver.Views.UserAuthentication
         private bool AllFieldsFilled()
         {
 
-            if (EntryName.Text == null || EntryEmail.Text == null || EntryPassword.Text == null || EntryPhone.Text == null || PickerCountry.SelectedIndex == -1)
+            if (EntryName.Text == null || EntryEmail.Text == null || EntryPassword.Text == null || EntryPhone.Text == null )
             {
                 Activ.IsRunning = false;
                 DisplayAlert("خطأ", "من فضلك أكمل البانات", "موافق");

@@ -36,12 +36,6 @@
                                 <Image Source="mail.png" Aspect="AspectFit"/>
                                 <Entry Placeholder="{i18n:Translate Email}" x:Name="EntryEmail" PlaceholderColor="LightGray" HorizontalOptions="FillAndExpand"/>
                             </StackLayout>
-
-                            <StackLayout Orientation="Horizontal">
-                                <Image Source="downArrow.png" Aspect="AspectFit"/>
-                                <Picker Title="{i18n:Translate SelectCountry}" ItemsSource="{Binding CountryName}" ItemDisplayBinding="{Binding }" x:Name="PickerCountry" HorizontalOptions="Center"/>
-                            </StackLayout>
-
                             <StackLayout Orientation="Horizontal">
                                 <Image Source="lock.png" Aspect="AspectFit"/>
                                 <Entry Placeholder="{i18n:Translate Pass}" IsPassword="True" PlaceholderColor="LightGray" x:Name="EntryPassword" HorizontalOptions="FillAndExpand"/>

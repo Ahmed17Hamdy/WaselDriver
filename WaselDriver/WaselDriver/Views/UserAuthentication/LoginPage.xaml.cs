@@ -1,4 +1,5 @@
-﻿using Newtonsoft.Json;
+﻿using Com.OneSignal;
+using Newtonsoft.Json;
 using Plugin.Connectivity;
 using Rg.Plugins.Popup.Services;
 using System;
@@ -22,6 +23,7 @@ namespace WaselDriver.Views.UserAuthentication
         public LoginPage()
         {
             InitializeComponent();
+            OneSignal.Current.IdsAvailable(IdsAvailable);
             FlowDirection = (WaselDriver.Helper.Settings.LastUserGravity == "Arabic") ? FlowDirection.RightToLeft : FlowDirection.LeftToRight;
             userService = new UserServices();
             EntryPhone.Completed += (Object sender, EventArgs e) =>
@@ -41,6 +43,12 @@ namespace WaselDriver.Views.UserAuthentication
 
         }
 
+        private void IdsAvailable(string userID, string pushToken)
+        {
+            WaselDriver.Helper.Settings.LastSignalID = pushToken;
+            WaselDriver.Helper.Settings.UserFirebaseToken = userID;
+
+        }
 
         private bool AllFieldsFilled()
         {
@@ -49,6 +57,11 @@ namespace WaselDriver.Views.UserAuthentication
             {
                 Activ.IsRunning = false;
                 DisplayAlert("خطأ", "من فضلك أكمل الحقول الفارغة", "OK");
+            }
+            else if (Settings.CarModelID == null)
+            {
+                Activ.IsRunning = false;
+                DisplayAlert("خطأ", "من فضلك إختر نوع السيارة", "OK");
             }
             else if (EntryEmail.Text.Length < 1 || EntryEmail.Text.Length < 1 || EntryPassword.Text.Length < 1)
             {

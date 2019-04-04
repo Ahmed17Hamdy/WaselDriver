@@ -70,6 +70,15 @@ namespace WaselDriver {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Cancel.
+        /// </summary>
+        internal static string Cancel {
+            get {
+                return ResourceManager.GetString("Cancel", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Car Images.
         /// </summary>
         internal static string CarImages {
@@ -88,6 +97,15 @@ namespace WaselDriver {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Please , Choose Your CarType.
+        /// </summary>
+        internal static string ChooseCarType {
+            get {
+                return ResourceManager.GetString("ChooseCarType", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Confirm.
         /// </summary>
         internal static string Confirm {
@@ -102,6 +120,24 @@ namespace WaselDriver {
         internal static string ConfirmPass {
             get {
                 return ResourceManager.GetString("ConfirmPass", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Continue.
+        /// </summary>
+        internal static string Continue {
+            get {
+                return ResourceManager.GetString("Continue", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Choose Your Country.
+        /// </summary>
+        internal static string CountryReg {
+            get {
+                return ResourceManager.GetString("CountryReg", resourceCulture);
             }
         }
         
@@ -187,6 +223,42 @@ namespace WaselDriver {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Language.
+        /// </summary>
+        internal static string Language {
+            get {
+                return ResourceManager.GetString("Language", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Start Location :.
+        /// </summary>
+        internal static string LocationFrom {
+            get {
+                return ResourceManager.GetString("LocationFrom", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Sorry, This Location doesn&apos;t have Address.
+        /// </summary>
+        internal static string LocationNotFound {
+            get {
+                return ResourceManager.GetString("LocationNotFound", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Arrival Location :.
+        /// </summary>
+        internal static string LocationTo {
+            get {
+                return ResourceManager.GetString("LocationTo", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Login.
         /// </summary>
         internal static string Login {
@@ -214,6 +286,15 @@ namespace WaselDriver {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Next.
+        /// </summary>
+        internal static string Next {
+            get {
+                return ResourceManager.GetString("Next", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to No Account ?.
         /// </summary>
         internal static string NoAccount {
@@ -228,6 +309,24 @@ namespace WaselDriver {
         internal static string Ok {
             get {
                 return ResourceManager.GetString("Ok", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Wants to Make an Order.
+        /// </summary>
+        internal static string OrderDetails {
+            get {
+                return ResourceManager.GetString("OrderDetails", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Order Confirmed.
+        /// </summary>
+        internal static string OrderSuccess {
+            get {
+                return ResourceManager.GetString("OrderSuccess", resourceCulture);
             }
         }
         
@@ -268,11 +367,20 @@ namespace WaselDriver {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to You&apos;re Registered , Wait For Activation Your Account.
+        ///   Looks up a localized string similar to You&apos;re Registered , Wait For Activation Your Account , We&apos;&apos;ll Contact You Soon.
         /// </summary>
         internal static string RegisterSuccess {
             get {
                 return ResourceManager.GetString("RegisterSuccess", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Select Car Type.
+        /// </summary>
+        internal static string SelectCarType {
+            get {
+                return ResourceManager.GetString("SelectCarType", resourceCulture);
             }
         }
         
@@ -282,6 +390,24 @@ namespace WaselDriver {
         internal static string SelectCountry {
             get {
                 return ResourceManager.GetString("SelectCountry", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Select Language.
+        /// </summary>
+        internal static string SelectLanguage {
+            get {
+                return ResourceManager.GetString("SelectLanguage", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to TryAgain.
+        /// </summary>
+        internal static string TryAgain {
+            get {
+                return ResourceManager.GetString("TryAgain", resourceCulture);
             }
         }
         

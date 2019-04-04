@@ -12,6 +12,8 @@ using Xamarin.Essentials;
 using Xamarin.Forms;
 using WaselDriver.Helper;
 using Xamarin.Forms.Xaml;
+using WaselDriver.Views.PopUps;
+using Rg.Plugins.Popup.Services;
 
 namespace WaselDriver.Views.UserAuthentication
 {
@@ -40,7 +42,7 @@ namespace WaselDriver.Views.UserAuthentication
         {
             Active.IsRunning = true;
             StringContent user_id = new StringContent(userId.ToString());   
-            StringContent car_model_id = new StringContent(3.ToString());
+            StringContent car_model_id = new StringContent(Settings.CarModelID);
             StringContent lat = new StringContent(Settings.LastLat);
             StringContent lang = new StringContent(Settings.LastLng);
             var content = new MultipartFormDataContent();
@@ -68,7 +70,7 @@ namespace WaselDriver.Views.UserAuthentication
                 else
                 {
                     Active.IsRunning = false;
-                    await DisplayAlert(json.message, AppResources.RegisterSuccess, "موافق");
+                    await DisplayAlert(json.message, AppResources.RegisterSuccess, AppResources.Ok);
                     Device.BeginInvokeOnMainThread(() => App.Current.MainPage = new LoginPage());
 
                 }
@@ -96,6 +98,12 @@ namespace WaselDriver.Views.UserAuthentication
                 return ProfilePic.GetStream();
             });
         }
+
+        private async void TapGestureRecognizer_Tapped(object sender, EventArgs e)
+        {
+            await Navigation.PushModalAsync(new CarTypePage());
+        }
+
         private async void NationalFront_Clicked(object sender, EventArgs e)
         {
             await CrossMedia.Current.Initialize();

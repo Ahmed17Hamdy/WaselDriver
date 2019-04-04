@@ -120,17 +120,29 @@
   <data name="BackCard" xml:space="preserve">
     <value>Identity Number Image (Back)</value>
   </data>
+  <data name="Cancel" xml:space="preserve">
+    <value>Cancel</value>
+  </data>
   <data name="CarImages" xml:space="preserve">
     <value>Car Images</value>
   </data>
   <data name="CarLiecence" xml:space="preserve">
     <value>Car Liecence Images</value>
   </data>
+  <data name="ChooseCarType" xml:space="preserve">
+    <value>Please , Choose Your CarType</value>
+  </data>
   <data name="Confirm" xml:space="preserve">
     <value>Confirm</value>
   </data>
   <data name="ConfirmPass" xml:space="preserve">
     <value>Confirm Your PassWord</value>
+  </data>
+  <data name="Continue" xml:space="preserve">
+    <value>Continue</value>
+  </data>
+  <data name="CountryReg" xml:space="preserve">
+    <value>Choose Your Country</value>
   </data>
   <data name="DriverLiecence" xml:space="preserve">
     <value>Driver Liecence Images</value>
@@ -159,6 +171,18 @@
   <data name="IdentityImages" xml:space="preserve">
     <value>Add Identity Number Image</value>
   </data>
+  <data name="Language" xml:space="preserve">
+    <value>Language</value>
+  </data>
+  <data name="LocationFrom" xml:space="preserve">
+    <value>Start Location :</value>
+  </data>
+  <data name="LocationNotFound" xml:space="preserve">
+    <value>Sorry, This Location doesn't have Address</value>
+  </data>
+  <data name="LocationTo" xml:space="preserve">
+    <value>Arrival Location :</value>
+  </data>
   <data name="Login" xml:space="preserve">
     <value>Login</value>
   </data>
@@ -168,11 +192,20 @@
   <data name="Name" xml:space="preserve">
     <value>Name</value>
   </data>
+  <data name="Next" xml:space="preserve">
+    <value>Next</value>
+  </data>
   <data name="NoAccount" xml:space="preserve">
     <value>No Account ?</value>
   </data>
   <data name="Ok" xml:space="preserve">
     <value>Ok</value>
+  </data>
+  <data name="OrderDetails" xml:space="preserve">
+    <value>Wants to Make an Order</value>
+  </data>
+  <data name="OrderSuccess" xml:space="preserve">
+    <value>Order Confirmed</value>
   </data>
   <data name="Pass" xml:space="preserve">
     <value>PassWord</value>
@@ -187,10 +220,19 @@
     <value>Register</value>
   </data>
   <data name="RegisterSuccess" xml:space="preserve">
-    <value>You're Registered , Wait For Activation Your Account</value>
+    <value>You're Registered , Wait For Activation Your Account , We''ll Contact You Soon</value>
+  </data>
+  <data name="SelectCarType" xml:space="preserve">
+    <value>Select Car Type</value>
   </data>
   <data name="SelectCountry" xml:space="preserve">
     <value>Select Country :</value>
+  </data>
+  <data name="SelectLanguage" xml:space="preserve">
+    <value>Select Language</value>
+  </data>
+  <data name="TryAgain" xml:space="preserve">
+    <value>TryAgain</value>
   </data>
   <data name="UserStatues" xml:space="preserve">
     <value>Your Account isn't Activated yet ...</value>

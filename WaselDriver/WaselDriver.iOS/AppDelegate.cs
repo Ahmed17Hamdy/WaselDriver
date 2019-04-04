@@ -3,6 +3,8 @@ using System.Collections.Generic;
 using System.Linq;
 using Com.OneSignal;
 using Foundation;
+using ImageCircle.Forms.Plugin.iOS;
+using TK.CustomMap.iOSUnified;
 using UIKit;
 
 namespace WaselDriver.iOS
@@ -23,7 +25,10 @@ namespace WaselDriver.iOS
         public override bool FinishedLaunching(UIApplication app, NSDictionary options)
         {
             global::Xamarin.Forms.Forms.Init();
+            ImageCircleRenderer.Init();
             LoadApplication(new App());
+            TKCustomMapRenderer.InitMapRenderer();
+           
             Rg.Plugins.Popup.Popup.Init();
             OneSignal.Current.StartInit("1126a3d0-1d80-42ee-94db-d0449ac0a62c").EndInit();
             return base.FinishedLaunching(app, options);

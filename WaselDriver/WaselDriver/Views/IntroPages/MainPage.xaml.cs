@@ -1,7 +1,9 @@
 ﻿using Newtonsoft.Json;
 using System;
+using System.Collections.ObjectModel;
 using System.Net.Http;
 using TK.CustomMap;
+using TK.CustomMap.Overlays;
 using WaselDriver.Helper;
 using WaselDriver.Models;
 using WaselDriver.Views.OrderPage;
@@ -12,6 +14,10 @@ namespace WaselDriver
 {
     public partial class MainPage : ContentPage
     {
+        private ObservableCollection<TKRoute> routes;
+        private ObservableCollection<TKCustomMapPin> pins;
+        private MapSpan bounds;
+
         public MainPage()
         {
             InitializeComponent();
@@ -75,7 +81,7 @@ namespace WaselDriver
                 }
                 else
                 {
-                    await DisplayAlert(AppResources.Error, AppResources.UserStatues, AppResources.Ok);
+                 //   await DisplayAlert(AppResources.Error, AppResources.UserStatues, AppResources.Ok);
                 }
             }          
            
