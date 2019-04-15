@@ -37,6 +37,7 @@ namespace WaselDriver.Views.UserAuthentication
                     role = Settings.LastUseeRole = 3,
                     device_id = "192.168.1.20",
                     firebase_token = Settings.UserFirebaseToken = "36666666",
+                    
 
                 };
                 UserServices userService = new UserServices();
@@ -57,8 +58,9 @@ namespace WaselDriver.Views.UserAuthentication
                             checker = true;
                         //  PopAlert(checker);
                             Settings.UserHash = JsonResponse.message.user_hash;
+                            Settings.LastUsedDriverID = JsonResponse.message.id;
                             Settings.UserFirebaseToken = JsonResponse.message.firebase_token;     
-                            Device.BeginInvokeOnMainThread(() => App.Current.MainPage = new DriverRegestration(JsonResponse.message.id));
+                            Device.BeginInvokeOnMainThread(() => App.Current.MainPage = new DriverRegestration());
                         }
                         else
                         {

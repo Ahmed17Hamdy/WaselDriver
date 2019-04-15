@@ -22,10 +22,10 @@ namespace WaselDriver.Views
 
         public SplashPage()
         {
-           // if (CrossConnectivity.Current.IsConnected)
+            if (CrossConnectivity.Current.IsConnected)
                 InitializeComponent();
            
-            //  else DisplayAlert("Message", AppResources.ErrorMessage, "Ok");
+              else DisplayAlert("Message", AppResources.ErrorMessage, "Ok");
 
         }
        
@@ -44,11 +44,11 @@ namespace WaselDriver.Views
 
         private void SetMainPage()
         {
-            if (Settings.LastUsedID == 0 )
+            if (Settings.LastUsedDriverID == 0 )
             {
                 App.Current.MainPage = new LanguagePage();
             }
-            else if (Settings.LastUsedID != 0 && Settings.LastUserStatus != "0" && Settings.LastNotify==null)
+            else if (Settings.LastUsedDriverID != 0 && Settings.LastUserStatus != "0" && Settings.LastNotify==null )
             {
                 App.Current.MainPage = new MainPage();                //Device.BeginInvokeOnMainThread(async () => { await Navigation.PushAsync(new MenuPage()); });                                                                      //MainPage = new AddNewHall();
             }
@@ -56,10 +56,11 @@ namespace WaselDriver.Views
             {
                 App.Current.MainPage = new LoginPage();
             }
-            else if (Settings.LastNotify != null)
+            else if (Settings.LastNotify!= null)
             {
-                App.Current.MainPage = new NotificationSummaryPage(Settings.LastNotify);
+                App.Current.MainPage = new NotificationSummaryPage();
             }
+           
         }
     }
 }

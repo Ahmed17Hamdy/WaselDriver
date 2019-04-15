@@ -21,8 +21,8 @@ namespace WaselDriver.Views.UserAuthentication
 	public partial class DriverRegestration : ContentPage
 	{
         private MediaFile ProfilePic, NationalImg1, NationalImg2, DriverLicImg, CarLicImg, CarImg;
-        int userId;
-        public DriverRegestration (int id)
+       
+        public DriverRegestration ()
 		{
 			InitializeComponent ();
             GetUserLocationAsync();
@@ -41,7 +41,7 @@ namespace WaselDriver.Views.UserAuthentication
         private async void Regbtn_Clicked(object sender, EventArgs e)
         {
             Active.IsRunning = true;
-            StringContent user_id = new StringContent(userId.ToString());   
+            StringContent user_id = new StringContent(Settings.LastUsedDriverID.ToString());   
             StringContent car_model_id = new StringContent(Settings.CarModelID);
             StringContent lat = new StringContent(Settings.LastLat);
             StringContent lang = new StringContent(Settings.LastLng);

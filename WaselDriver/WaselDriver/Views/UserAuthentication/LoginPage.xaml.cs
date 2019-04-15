@@ -101,7 +101,7 @@ namespace WaselDriver.Views.UserAuthentication
                             {
                                 var _userID = JsonResponse.message.id;
                                 checker = true;
-                                Settings.LastUsedID = _userID;
+                                Settings.LastUsedDriverID = _userID;
                                 Settings.LastUsedEmail = EntryEmail.Text;
                                 Settings.UserHash = JsonResponse.message.user_hash;
                                 Settings.LastUseeRole = JsonResponse.message.role;

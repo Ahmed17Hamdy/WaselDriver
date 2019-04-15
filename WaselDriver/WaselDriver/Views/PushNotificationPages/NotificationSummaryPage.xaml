@@ -23,7 +23,7 @@
                 <StackLayout VerticalOptions="Center" BackgroundColor="White" HorizontalOptions="Center" Orientation="Horizontal">
                     <Button x:Name="Acceptbtn" BackgroundColor="Green" Clicked="Acceptbtn_Clicked" Text="{i18n:Translate Confirm}" />
                     <BoxView BackgroundColor="OrangeRed" WidthRequest="1"/>
-                    <Button BackgroundColor="Red" Text="{i18n:Translate Cancel}" />
+                    <Button x:Name="Cancelbtn" Clicked="Cancelbtn_Clicked" BackgroundColor="Red" Text="{i18n:Translate Cancel}" />
                 </StackLayout>
             </StackLayout>
             <ActivityIndicator x:Name="Active"  HorizontalOptions="Center" VerticalOptions="Center"

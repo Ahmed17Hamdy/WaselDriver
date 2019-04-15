@@ -9,6 +9,10 @@ namespace WaselDriver.Views.PopUps
 	[XamlCompilation(XamlCompilationOptions.Compile)]
 	public partial class RequestPopUp : PopupPage
     {
+        public RequestPopUp(string message)
+        {
+        }
+
         public RequestPopUp(bool Check, string ss)
         {
             InitializeComponent();

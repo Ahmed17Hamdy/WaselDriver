@@ -15,6 +15,8 @@ using System.Net.Http;
 using WaselDriver.Views.OrderPage;
 using TK.CustomMap.Overlays;
 using TK.CustomMap;
+using WaselDriver.Views.PopUps;
+using Rg.Plugins.Popup.Services;
 
 namespace WaselDriver.Views.PushNotificationPages
 {
@@ -25,14 +27,26 @@ namespace WaselDriver.Views.PushNotificationPages
         private ObservableCollection<TKCustomMapPin> pins;
         private MapSpan bounds;
 
-        public NotificationSummaryPage (string labelText)
+        public NotificationSummaryPage ()
 		{
 			InitializeComponent ();
-            var Req = JsonConvert.DeserializeObject<DelivaryObject>(labelText);
-            userNamelbl.Text = Req.driver_id;
-            GetAddressFrom(Req.latfrom, Req.lngfrom);
-            GetAddressTo(Req.latto, Req.lngto);
-          
+            ChechNotification();
+        }
+        private  void ChechNotification()
+        {
+            if(Settings.LastNotify!= "Has been approved" || Settings.LastNotify!= "not done")
+            {
+                var Req = JsonConvert.DeserializeObject<DelivaryObject>(Settings.LastNotify);
+                userNamelbl.Text = Req.driver_id;
+                Settings.LastOrderid = Req.id;
+                Settings.LastUsedID = int.Parse(Req.user_id);
+                Settings.Latto = Req.latto;
+                Settings.Lngto = Req.lngto;
+                Settings.Latfrom = Req.latfrom;
+                Settings.Lngfrom = Req.lngfrom;
+                GetAddressFrom(Settings.Latfrom, Settings.Lngfrom);
+                GetAddressTo(Settings.Latto, Settings.Lngto);
+            }
         }
 
         private async void GetAddressFrom(string latfrom , string lngfrom)
@@ -86,16 +100,76 @@ namespace WaselDriver.Views.PushNotificationPages
 
         private async void Acceptbtn_Clicked(object sender, EventArgs e)
         {
-            TirhalOrder order = new TirhalOrder
+            Settings.Lastdone=1;
+            CheckedTirhalOrder order = new CheckedTirhalOrder
             {
                 latfrom = Settings.Latfrom,
                 lngfrom = Settings.Lngfrom,
                 user_id = Settings.LastUsedID.ToString(),
-            //    driver_id = Settings.LastUsedDriverID.ToString(),
-             //   car_model_id = Settings.LastUsedCarModel.ToString(),
-
+                driver_id = Settings.LastUsedDriverID.ToString(),
+                car_model_id = Settings.LastUsedCarModel.ToString(),
                 latto = Settings.Latto,
                 lngto = Settings.Lngto,
+                done = Settings.Lastdone,
+                order_id = Settings.LastOrderid.ToString()
+            };
+            Dictionary<string, string> values = new Dictionary<string, string>();
+            values.Add("user_id", order.user_id);
+            values.Add("driver_id", order.driver_id);
+            values.Add("latfrom", order.latfrom);
+            values.Add("lngfrom", order.lngfrom);
+            values.Add("done", order.done.ToString());
+            values.Add("latto", order.latto);
+            values.Add("lngto", order.lngto);
+            values.Add("car_model", order.car_model_id);
+            values.Add("created_at", order.created_at);
+            values.Add("order_id", order.order_id);
+            string content = JsonConvert.SerializeObject(values);
+            var httpClient = new HttpClient();
+            try
+            {
+                var response = await httpClient.PostAsync("http://wassel.alsalil.net/api/addResponse", 
+                    new StringContent(content, Encoding.UTF8, "text/json"));
+                var serverResponse = response.Content.ReadAsStringAsync().Result.ToString();
+                var json = JsonConvert.DeserializeObject<Response<TirhalOrder, string>>(serverResponse);
+                if (json.success == false)
+                {
+                    Active.IsRunning = false;
+                    Settings.LastNotify = null;
+                    await DisplayAlert(AppResources.ErrorMessage, json.message, AppResources.Ok);
+                   
+                }
+                else
+                {
+                    Active.IsRunning = false;
+                    Settings.LastNotify = null;
+                    // await DisplayAlert(AppResources.OrderSuccess, json.message, AppResources.Ok);
+                    //  Device.BeginInvokeOnMainThread(() => App.Current.MainPage = new OrdersPage());
+                    await PopupNavigation.Instance.PushAsync(new SuccessPage(json.message));
+                    App.Current.MainPage = new OrdersPage();
+                }
+            }
+            catch (Exception)
+            {
+                Active.IsRunning = false;
+                await DisplayAlert(AppResources.ErrorMessage, AppResources.ErrorMessage, AppResources.Ok);
+            }
+        }
+       
+        private async void Cancelbtn_Clicked(object sender, EventArgs e)
+        {
+            Settings.Lastdone =0;
+            CheckedTirhalOrder order = new CheckedTirhalOrder
+            {
+                latfrom = Settings.Latfrom,
+                lngfrom = Settings.Lngfrom,
+                user_id = Settings.LastUsedID.ToString(),
+                driver_id = Settings.LastUsedDriverID.ToString(),
+                car_model_id = Settings.LastUsedCarModel.ToString(),
+                latto = Settings.Latto,
+                lngto = Settings.Lngto,
+                done = Settings.Lastdone,
+                order_id = Settings.LastOrderid.ToString()
             };
             Dictionary<string, string> values = new Dictionary<string, string>();
             values.Add("user_id", order.user_id.ToString());
@@ -107,23 +181,26 @@ namespace WaselDriver.Views.PushNotificationPages
             values.Add("lngto", order.lngto);
             values.Add("car_model", order.car_model_id);
             values.Add("created_at", order.created_at);
+            values.Add("order_id", order.order_id);
             string content = JsonConvert.SerializeObject(values);
             var httpClient = new HttpClient();
             try
             {
-                var response = await httpClient.PostAsync("http://wassel.alsalil.net/api/addtirhalorder", new StringContent(content, Encoding.UTF8, "text/json"));
+                var response = await httpClient.PostAsync("http://wassel.alsalil.net/api/addResponse", new StringContent(content, Encoding.UTF8, "text/json"));
                 var serverResponse = response.Content.ReadAsStringAsync().Result.ToString();
                 var json = JsonConvert.DeserializeObject<Response<TirhalOrder, string>>(serverResponse);
                 if (json.success == false)
                 {
                     Active.IsRunning = false;
+                    Settings.LastNotify = null;
                     await DisplayAlert(AppResources.Error, json.message, AppResources.Ok);
                 }
                 else
                 {
                     Active.IsRunning = false;
-        //            await DisplayAlert(AppResources.OrderSuccess, json.message, AppResources.Ok);
-                    Device.BeginInvokeOnMainThread(() => App.Current.MainPage = new OrdersPage());
+                    Settings.LastNotify = null;
+                    await DisplayAlert(AppResources.OrderSuccess, json.message, AppResources.Ok);
+                    Device.BeginInvokeOnMainThread(() => App.Current.MainPage = new MainPage());
                 }
             }
             catch (Exception)

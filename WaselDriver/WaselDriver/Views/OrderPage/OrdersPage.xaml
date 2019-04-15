@@ -6,9 +6,9 @@
              x:Class="WaselDriver.Views.OrderPage.OrdersPage">
     
     <ContentPage.Content>
-        <custommap:TKCustomMap x:Name="OrderMap"  
+        <custommap:TKCustomMap x:Name="OrderMap"  IsClusteringEnabled="False"
       IsShowingUser="True" HasScrollEnabled="True" RouteCalculationFinished="OrderMap_RouteCalculationFinished" 
-                               HasZoomEnabled="True"
+                               HasZoomEnabled="True" UserLocationChanged="OrderMap_UserLocationChanged"
                                />
     </ContentPage.Content>
 </ContentPage>

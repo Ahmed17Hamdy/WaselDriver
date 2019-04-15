@@ -1,12 +1,17 @@
-﻿using Newtonsoft.Json;
+﻿using Com.OneSignal;
+using Com.OneSignal.Abstractions;
+using Newtonsoft.Json;
 using System;
+using System.Collections.Generic;
 using System.Collections.ObjectModel;
 using System.Net.Http;
+using System.Text;
 using TK.CustomMap;
 using TK.CustomMap.Overlays;
 using WaselDriver.Helper;
 using WaselDriver.Models;
 using WaselDriver.Views.OrderPage;
+using WaselDriver.Views.PushNotificationPages;
 using Xamarin.Essentials;
 using Xamarin.Forms;
 
@@ -21,9 +26,9 @@ namespace WaselDriver
         public MainPage()
         {
             InitializeComponent();
+           
             CheckUserStatus();
         }
-
         private void CheckUserStatus()
         {
             if (Settings.LastUserStatus == "0")
@@ -52,24 +57,22 @@ namespace WaselDriver
                         var CurrentLocation = new Position(x, y);
                         if (CurrentLocation != null)
                         {
-                            StringContent user_id = new StringContent(Settings.LastUsedID.ToString());
-                            StringContent lat = new StringContent(Settings.LastLat);
-                            StringContent lng = new StringContent(Settings.LastLng);
-                            var Content = new MultipartFormDataContent();
-                            Content.Add(user_id, "user_id");
-                            Content.Add(lat, "lat");
-                            Content.Add(lng, "lng");
+                            Dictionary<string, string> values = new Dictionary<string, string>();
+                            values.Add("driver_id",Settings.LastUsedDriverID.ToString());
+                            values.Add("lat", Settings.LastLat);
+                            values.Add("lng", Settings.LastLng);
+                            string content = JsonConvert.SerializeObject(values);
                             var httpClient = new HttpClient();
                             try
                             {
-                                var httpResponseMessage = await httpClient.PostAsync("http://wassel.alsalil.net/api/updatelocal", Content);
-                                var serverResponse = httpResponseMessage.Content.ReadAsStringAsync().Result.ToString();
+                                var response = await httpClient.PostAsync("http://wassel.alsalil.net/api/updatelocal", 
+                                    new StringContent(content, Encoding.UTF8, "text/json"));
+                                var serverResponse = response.Content.ReadAsStringAsync().Result.ToString();
                                 var json = JsonConvert.DeserializeObject<Response<string, string>>(serverResponse);
-
+                              
                             }
                             catch (Exception)
-                            {
-                                //  Active.IsRunning = false;
+                            {                             
                                 await DisplayAlert(AppResources.Error, AppResources.ErrorMessage, AppResources.Ok);
                             }
                         }
@@ -79,10 +82,7 @@ namespace WaselDriver
                         return;
                     }
                 }
-                else
-                {
-                 //   await DisplayAlert(AppResources.Error, AppResources.UserStatues, AppResources.Ok);
-                }
+            
             }          
            
        

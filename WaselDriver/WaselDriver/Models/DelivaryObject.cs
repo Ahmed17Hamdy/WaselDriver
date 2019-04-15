@@ -43,4 +43,9 @@ namespace WaselDriver.Models
         public string lngfrom { get; set; }
         public string car_model_id { get; set; }
     }
+    public class CheckedTirhalOrder : TirhalOrder
+    {
+        public string order_id { get; set; }
+
+    }
 }

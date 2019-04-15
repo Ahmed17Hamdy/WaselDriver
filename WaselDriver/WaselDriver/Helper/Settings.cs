@@ -337,6 +337,37 @@ namespace WaselDriver.Helper
             set => AppSettings.AddOrUpdateValue(_notification, value);
 
         }
+        private const string LastDriverIDSettingsKey = "last_Driver_ID_key";
+        private static readonly int SettingsDriverIDDefault = 0;
+        public static int LastUsedDriverID
+        {
+            get => AppSettings.GetValueOrDefault(LastDriverIDSettingsKey, SettingsDriverIDDefault);
+            set => AppSettings.AddOrUpdateValue(LastDriverIDSettingsKey, value);
 
+        }
+        private const string LastCarModelSettingsKey = "last_CarModel_key";
+        private static readonly int SettingsCarModelDefault = 0;
+        public static int LastUsedCarModel
+        {
+            get => AppSettings.GetValueOrDefault(LastCarModelSettingsKey, SettingsCarModelDefault);
+            set => AppSettings.AddOrUpdateValue(LastCarModelSettingsKey, value);
+
+        }
+        private const string LastdoneKey = "last_done_key";
+        private static readonly int SettingdoneDefault = 0;
+        public static int Lastdone
+        {
+            get => AppSettings.GetValueOrDefault(LastdoneKey, SettingdoneDefault);
+            set => AppSettings.AddOrUpdateValue(LastdoneKey, value);
+
+        }
+        private const string LastidKey = "last_id_key";
+        private static readonly int SettingidDefault = 0;
+        public static int LastOrderid
+        {
+            get => AppSettings.GetValueOrDefault(LastidKey, SettingidDefault);
+            set => AppSettings.AddOrUpdateValue(LastidKey, value);
+
+        }
     }
 }
