@@ -3,6 +3,7 @@ using Plugin.Settings.Abstractions;
 using System;
 using System.Collections.Generic;
 using System.Text;
+using WaselDriver.Models;
 
 namespace WaselDriver.Helper
 {
@@ -57,6 +58,9 @@ namespace WaselDriver.Helper
                 AppSettings.AddOrUpdateValue(LastlatfromKey, value);
 
         }
+        
+
+
         private const string LastlngtoKey = "last_lngto_key";
         private static readonly string LngtoKey = string.Empty;
         public static string Lngto
@@ -112,6 +116,21 @@ namespace WaselDriver.Helper
             set
             =>
                 AppSettings.AddOrUpdateValue(LastPlacefromKey, value);
+
+        }
+      
+        private const string LastNameKey = "last_Name_key";
+        private static readonly string LastProfileName = string.Empty;
+        public static string ProfileName
+        {
+            get
+            =>
+                 AppSettings.GetValueOrDefault(LastProfileName, LastNameKey);
+
+
+            set
+            =>
+                AppSettings.AddOrUpdateValue(LastProfileName, value);
 
         }
 

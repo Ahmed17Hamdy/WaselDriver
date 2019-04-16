@@ -186,11 +186,20 @@
   <data name="Login" xml:space="preserve">
     <value>Login</value>
   </data>
+  <data name="LogOUt" xml:space="preserve">
+    <value>Log Out</value>
+  </data>
+  <data name="MainPage" xml:space="preserve">
+    <value>Main Page</value>
+  </data>
   <data name="MyOrders" xml:space="preserve">
     <value>My Orders</value>
   </data>
   <data name="Name" xml:space="preserve">
     <value>Name</value>
+  </data>
+  <data name="NewPass" xml:space="preserve">
+    <value>New Password</value>
   </data>
   <data name="Next" xml:space="preserve">
     <value>Next</value>
@@ -200,6 +209,9 @@
   </data>
   <data name="Ok" xml:space="preserve">
     <value>Ok</value>
+  </data>
+  <data name="OldPass" xml:space="preserve">
+    <value>Current Password</value>
   </data>
   <data name="OrderDetails" xml:space="preserve">
     <value>Wants to Make an Order</value>
@@ -216,6 +228,9 @@
   <data name="ProfileImages" xml:space="preserve">
     <value>Add Profile Image</value>
   </data>
+  <data name="ProfilePage" xml:space="preserve">
+    <value>Profile Page</value>
+  </data>
   <data name="Register" xml:space="preserve">
     <value>Register</value>
   </data>
@@ -231,10 +246,22 @@
   <data name="SelectLanguage" xml:space="preserve">
     <value>Select Language</value>
   </data>
+  <data name="SettingsPass" xml:space="preserve">
+    <value>Change Password</value>
+  </data>
   <data name="TryAgain" xml:space="preserve">
     <value>TryAgain</value>
   </data>
   <data name="UserStatues" xml:space="preserve">
     <value>Your Account isn't Activated yet ...</value>
+  </data>
+  <data name="AskLogOUt" xml:space="preserve">
+    <value>Do You Want To Log Out ?</value>
+  </data>
+  <data name="No" xml:space="preserve">
+    <value>No</value>
+  </data>
+  <data name="Yes" xml:space="preserve">
+    <value>Yes</value>
   </data>
 </root>

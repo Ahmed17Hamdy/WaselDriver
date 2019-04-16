@@ -2,15 +2,22 @@
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              xmlns:local="clr-namespace:WaselDriver.Views"
+               xmlns:i18n="clr-namespace:WaselDriver.CustomControl"
+             xmlns:viewmodel="clr-namespace:WaselDriver.ViewModels"
              x:Class="WaselDriver.Views.SplashPage">
+    <ContentPage.BindingContext>
+        <viewmodel:BaseViewModel/>
+    </ContentPage.BindingContext>
     <ContentPage.Content>
         <Grid HorizontalOptions="Fill" VerticalOptions="Fill">
             <Grid.RowDefinitions>
                 <RowDefinition Height="1.5*"/>
                 <RowDefinition Height="*"/>
             </Grid.RowDefinitions>
-            
-            <Grid Grid.Row="0" HorizontalOptions="Center" VerticalOptions="End">
+            <local:ConnectionView Grid.Row="0">
+                <Button Text="{i18n:Translate TryAgain}" Clicked="Button_Clicked" />
+            </local:ConnectionView>
+            <Grid IsVisible="{Binding IsConnected}" Grid.Row="0" HorizontalOptions="Center" VerticalOptions="End">
                 <Grid.ColumnDefinitions>
                     <ColumnDefinition Width="0.5*"/>
                     <ColumnDefinition Width="*"/>

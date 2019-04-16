@@ -21,12 +21,8 @@ namespace WaselDriver.Views
         private string labelText;
 
         public SplashPage()
-        {
-            if (CrossConnectivity.Current.IsConnected)
+        {           
                 InitializeComponent();
-           
-              else DisplayAlert("Message", AppResources.ErrorMessage, "Ok");
-
         }
        
 
@@ -50,7 +46,7 @@ namespace WaselDriver.Views
             }
             else if (Settings.LastUsedDriverID != 0 && Settings.LastUserStatus != "0" && Settings.LastNotify==null )
             {
-                App.Current.MainPage = new MainPage();                //Device.BeginInvokeOnMainThread(async () => { await Navigation.PushAsync(new MenuPage()); });                                                                      //MainPage = new AddNewHall();
+                App.Current.MainPage = new MainTabbed();                //Device.BeginInvokeOnMainThread(async () => { await Navigation.PushAsync(new MenuPage()); });                                                                      //MainPage = new AddNewHall();
             }
             else if( Settings.LastUserStatus == "0")
             {
@@ -61,6 +57,11 @@ namespace WaselDriver.Views
                 App.Current.MainPage = new NotificationSummaryPage();
             }
            
+        }
+
+        private void Button_Clicked(object sender, EventArgs e)
+        {
+            App.Current.MainPage = new SplashPage();
         }
     }
 }

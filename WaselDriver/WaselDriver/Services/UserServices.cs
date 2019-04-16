@@ -201,5 +201,29 @@ namespace WaselDriver.Services
                 }
             }
         }
+        public async Task<string> ChangePassword(string OldPass, string NewBassword)
+        {
+            using (var client = new HttpClient())
+            {
+                Dictionary<string, string> values = new Dictionary<string, string>();
+                values.Add("old_password", OldPass);
+                values.Add("new_password", NewBassword);
+                values.Add("confirmpassword", NewBassword);
+                values.Add("user_hash", WaselDriver.Helper.Settings.UserHash);
+                values.Add("user_id", WaselDriver.Helper.Settings.LastUsedID.ToString());
+
+                string content = JsonConvert.SerializeObject(values);
+                try
+                {
+                    var response = await client.PostAsync("http://wassel.alsalil.net/api/rechangepass", new StringContent(content, Encoding.UTF8, "text/json"));
+                    var serverResponse = response.Content.ReadAsStringAsync().Result.ToString();
+                    return serverResponse;
+                }
+                catch (Exception)
+                {
+                    return "False";
+                }
+            }
+        }
     }
 }

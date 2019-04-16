@@ -183,11 +183,20 @@
   <data name="Login" xml:space="preserve">
     <value>تسجيل الدخول</value>
   </data>
+  <data name="LogOUt" xml:space="preserve">
+    <value>تسجيل الخروج</value>
+  </data>
+  <data name="MainPage" xml:space="preserve">
+    <value>الصفحة الرئيسية</value>
+  </data>
   <data name="MyOrders" xml:space="preserve">
     <value>طلباتى</value>
   </data>
   <data name="Name" xml:space="preserve">
     <value>الإسم</value>
+  </data>
+  <data name="NewPass" xml:space="preserve">
+    <value>الرقم السري الجديد</value>
   </data>
   <data name="Next" xml:space="preserve">
     <value>التالى</value>
@@ -197,6 +206,9 @@
   </data>
   <data name="Ok" xml:space="preserve">
     <value>حسناً</value>
+  </data>
+  <data name="OldPass" xml:space="preserve">
+    <value>الرقم السري الحالي</value>
   </data>
   <data name="OrderDetails" xml:space="preserve">
     <value>يريد طلب توصيل</value>
@@ -212,6 +224,9 @@
   </data>
   <data name="ProfileImages" xml:space="preserve">
     <value>إضافة الصور الشخصية</value>
+  </data>
+  <data name="ProfilePage" xml:space="preserve">
+    <value>الحساب</value>
   </data>
   <data name="Register" xml:space="preserve">
     <value>سجل</value>
@@ -231,10 +246,22 @@
   <data name="SelectLanguage" xml:space="preserve">
     <value>إختر اللغة</value>
   </data>
+  <data name="SettingsPass" xml:space="preserve">
+    <value>تغيير الرقم السري</value>
+  </data>
   <data name="TryAgain" xml:space="preserve">
     <value>حاول مرة أخرى</value>
   </data>
   <data name="UserStatues" xml:space="preserve">
     <value> .... حسابك غير مفعل حتى الآن</value>
+  </data>
+  <data name="AskLogOUt" xml:space="preserve">
+    <value>هل تريد تسجيل الخروج ؟</value>
+  </data>
+  <data name="No" xml:space="preserve">
+    <value>لا</value>
+  </data>
+  <data name="Yes" xml:space="preserve">
+    <value>نعم</value>
   </data>
 </root>

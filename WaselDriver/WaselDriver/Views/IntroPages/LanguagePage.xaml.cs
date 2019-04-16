@@ -30,7 +30,8 @@ namespace WaselDriver.Views.IntroPages
             Activ.IsRunning = true;
             if (CrossConnectivity.Current.IsConnected)
             {
-                CrossMultilingual.Current.CurrentCultureInfo = CrossMultilingual.Current.NeutralCultureInfoList.ToList().First(element => element.EnglishName.Contains("Arabic"));
+                CrossMultilingual.Current.CurrentCultureInfo = 
+                    CrossMultilingual.Current.NeutralCultureInfoList.ToList().First(element => element.EnglishName.Contains("Arabic"));
                 AppResources.Culture = CrossMultilingual.Current.CurrentCultureInfo;
                 Settings.LastUserGravity = "Arabic";
                 GravityClass.Grav();

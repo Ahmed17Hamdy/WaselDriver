@@ -71,6 +71,7 @@ namespace WaselDriver.Views.UserAuthentication
                 {
                     Active.IsRunning = false;
                     await DisplayAlert(json.message, AppResources.RegisterSuccess, AppResources.Ok);
+                   
                     Device.BeginInvokeOnMainThread(() => App.Current.MainPage = new LoginPage());
 
                 }

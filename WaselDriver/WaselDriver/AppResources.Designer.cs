@@ -61,6 +61,15 @@ namespace WaselDriver {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Do You Want To Log Out ?.
+        /// </summary>
+        internal static string AskLogOUt {
+            get {
+                return ResourceManager.GetString("AskLogOUt", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Identity Number Image (Back).
         /// </summary>
         internal static string BackCard {
@@ -268,6 +277,24 @@ namespace WaselDriver {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Log Out.
+        /// </summary>
+        internal static string LogOUt {
+            get {
+                return ResourceManager.GetString("LogOUt", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Main Page.
+        /// </summary>
+        internal static string MainPage {
+            get {
+                return ResourceManager.GetString("MainPage", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to My Orders.
         /// </summary>
         internal static string MyOrders {
@@ -286,11 +313,29 @@ namespace WaselDriver {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to New Password.
+        /// </summary>
+        internal static string NewPass {
+            get {
+                return ResourceManager.GetString("NewPass", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Next.
         /// </summary>
         internal static string Next {
             get {
                 return ResourceManager.GetString("Next", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to No.
+        /// </summary>
+        internal static string No {
+            get {
+                return ResourceManager.GetString("No", resourceCulture);
             }
         }
         
@@ -309,6 +354,15 @@ namespace WaselDriver {
         internal static string Ok {
             get {
                 return ResourceManager.GetString("Ok", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Current Password.
+        /// </summary>
+        internal static string OldPass {
+            get {
+                return ResourceManager.GetString("OldPass", resourceCulture);
             }
         }
         
@@ -358,6 +412,15 @@ namespace WaselDriver {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Profile Page.
+        /// </summary>
+        internal static string ProfilePage {
+            get {
+                return ResourceManager.GetString("ProfilePage", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Register.
         /// </summary>
         internal static string Register {
@@ -403,6 +466,15 @@ namespace WaselDriver {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Change Password.
+        /// </summary>
+        internal static string SettingsPass {
+            get {
+                return ResourceManager.GetString("SettingsPass", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to TryAgain.
         /// </summary>
         internal static string TryAgain {
@@ -417,6 +489,15 @@ namespace WaselDriver {
         internal static string UserStatues {
             get {
                 return ResourceManager.GetString("UserStatues", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Yes.
+        /// </summary>
+        internal static string Yes {
+            get {
+                return ResourceManager.GetString("Yes", resourceCulture);
             }
         }
     }

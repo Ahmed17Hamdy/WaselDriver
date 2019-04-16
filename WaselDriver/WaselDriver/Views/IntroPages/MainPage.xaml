@@ -13,13 +13,6 @@
             </Grid.RowDefinitions>
             <StackLayout Grid.Row="0" >
                 <Label x:Name="UserStatuslbl" HorizontalOptions="Center" VerticalOptions="Center" Text="{i18n:Translate UserStatues}"/>
-                <StackLayout Orientation="Horizontal">
-                    <Label Text="{i18n:Translate MyOrders}"  >
-                        <Label.GestureRecognizers>
-                            <TapGestureRecognizer Tapped="TapGestureRecognizer_Tapped" />
-                        </Label.GestureRecognizers>
-                    </Label>
-                </StackLayout>
             </StackLayout>
             <AbsoluteLayout Grid.Row="1">
                 <Grid AbsoluteLayout.LayoutBounds="0,0,1,1" AbsoluteLayout.LayoutFlags="All">
@@ -29,9 +22,7 @@
                                IsShowingUser="True"
                                UserLocationChanged="UserLocationChanged"
                                />
-                    <Image HeightRequest="50" WidthRequest="50" 
-                       VerticalOptions="Center" HorizontalOptions="Center"
-                       Source="MainPin"/>
+                 
                 </Grid>
             </AbsoluteLayout>
         </Grid>

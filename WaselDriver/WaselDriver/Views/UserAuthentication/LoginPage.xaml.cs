@@ -10,6 +10,7 @@ using System.Threading.Tasks;
 using WaselDriver.Helper;
 using WaselDriver.Models;
 using WaselDriver.Services;
+using WaselDriver.Views.IntroPages;
 using WaselDriver.Views.PopUps;
 using Xamarin.Forms;
 using Xamarin.Forms.Xaml;
@@ -106,8 +107,9 @@ namespace WaselDriver.Views.UserAuthentication
                                 Settings.UserHash = JsonResponse.message.user_hash;
                                 Settings.LastUseeRole = JsonResponse.message.role;
                                 Settings.LastUserStatus = JsonResponse.message.status;
+                                Settings.ProfileName = JsonResponse.message.name;
                                 PopAlert(checker);
-                                Device.BeginInvokeOnMainThread(() => App.Current.MainPage = new MainPage());
+                                Device.BeginInvokeOnMainThread(() => App.Current.MainPage = new MainTabbed());
                             }
                             else
                             {

@@ -216,4 +216,25 @@
   <ItemGroup>
     <BundleResource Include="Resources\WaselLogoo.png" />
   </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\CurvedMask.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\HeaderBackground.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\taxidriver.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\downArrow.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\aLanguage.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\checked.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\Elanguage.png" />
+  </ItemGroup>
 </Project>

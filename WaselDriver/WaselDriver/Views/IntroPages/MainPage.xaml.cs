@@ -19,10 +19,7 @@ namespace WaselDriver
 {
     public partial class MainPage : ContentPage
     {
-        private ObservableCollection<TKRoute> routes;
-        private ObservableCollection<TKCustomMapPin> pins;
-        private MapSpan bounds;
-
+   
         public MainPage()
         {
             InitializeComponent();
@@ -88,16 +85,5 @@ namespace WaselDriver
        
         }
 
-        private async void TapGestureRecognizer_Tapped(object sender, EventArgs e)
-        {
-            if (Settings.LastUserStatus!="1")
-            {
-                await Navigation.PushModalAsync(new OrdersPage());
-            }
-            else
-            {
-                await DisplayAlert(AppResources.Error, AppResources.UserStatues, AppResources.Ok);
-            }
-        }
     }
 }

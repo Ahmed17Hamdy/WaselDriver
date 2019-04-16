@@ -136,8 +136,8 @@ namespace WaselDriver.Views.PushNotificationPages
                 {
                     Active.IsRunning = false;
                     Settings.LastNotify = null;
-                    await DisplayAlert(AppResources.ErrorMessage, json.message, AppResources.Ok);
-                   
+                    await PopupNavigation.Instance.PushAsync(new SuccessPage(json.message));
+                    App.Current.MainPage = new TabbedPage();
                 }
                 else
                 {
